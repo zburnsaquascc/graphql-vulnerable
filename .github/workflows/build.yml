@@ -2,6 +2,7 @@ name: build
 on:
   push:
     branches:
+      - main
       - master
 jobs:
   checkout:
@@ -20,4 +21,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: "dockerhub_org/dockerhub_repo:${{ github.sha }}"
+          tags: "${{ secrets.DOCKERHUB_USERNAME }}/${{ secrets.DOCKERHUB_REPO }}:${{ github.sha }}"
