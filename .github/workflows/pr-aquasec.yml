@@ -1,4 +1,4 @@
-name: Aqua
+name: Aqua PR
 on: pull_request
 jobs:
   aqua:
